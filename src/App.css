@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+.theBigOne{
+  font-size: 200px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.BigAnimated{
+  font-size: 200px;
+  animation: shake 0.25s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes shake {
+  10%, 90% {
+  transform: translate3d(-1px, 0, 0);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+20%, 80% {
+  transform: translate3d(2px, 0, 0);
+}
+
+30%, 50%, 70% {
+  transform: translate3d(-4px, 0, 0);
+}
+
+40%, 60% {
+  transform: translate3d(4px, 0, 0);
+}
+}
+
+.mainContainer {
+  border-radius: 5px;
+  background-color: purple;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 40%;
+  margin: auto;
+  margin-top: 2em;
+}
+
+button{
+  background-color: purple;
+  border-width: 0;
+  margin: 0.2em;
+}
+
+h1{
+  color: orange;
+  font-family: 'Varela Round', sans-serif;
+  text-decoration: underline;
+}
+
+h2, p{
+  color: orange;
+  font-family: 'Varela Round', sans-serif;
+}
+
+body{
+  background-color: black;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.restartButton {
+  color: orange;
+  font-family: 'Varela Round', sans-serif;
+  border-color: orange;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  font-size: 150%;
+  margin-bottom: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.restartButton:disabled {
+  color: purple;
+  font-family: 'Varela Round', sans-serif;
+  border-color: purple;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  font-size: 150%;
+  margin-bottom: 1em;
 }
